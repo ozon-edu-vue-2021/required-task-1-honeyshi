@@ -6,18 +6,14 @@ body {
   background-color: #f5f5f5;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 img {
   width: 100%;
   max-width: 100%;
   display: block;
-}
-
-a.open {
-  color: #ec407a;
-}
-
-a.open:hover {
-  color: #e91e63;
 }
 
 button {
@@ -37,7 +33,7 @@ button:disabled:hover {
   background-color: #cfd8dc !important;
 }
 
-main {
+.main {
   max-width: 1400px;
   min-height: 100%;
   display: flex;
@@ -60,17 +56,6 @@ main {
   align-self: center;
   line-height: 0;
   width: 200px;
-  height: 40px;
-}
-
-.action.close {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  background-color: transparent;
-  line-height: 0;
-  font-size: 50px;
-  width: 40px;
   height: 40px;
 }
 
@@ -150,4 +135,27 @@ figcaption {
 
 .popup .link {
   display: inline;
+}
+
+a.open {
+  color: #ec407a;
+}
+
+a.open:hover {
+  color: #9d214b;
+}
+
+.action.close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: transparent;
+  line-height: 0;
+  font-size: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.action.close:hover {
+  color: #424242;
 }

@@ -1,6 +1,8 @@
 'use strict';
 
-const action = document.querySelector('.action');
+const templateImageCard = document.querySelector('#image');
+const templateImagePopup = document.querySelector('#popup-image');
+const action = document.querySelector('.main .action');
 const container = document.querySelector('.images');
 const body = document.querySelector('body');
 const popup = document.querySelector('.popup');
@@ -102,7 +104,6 @@ const renderPictures = function(list) {
   if (!list.length) {
     throw Error(`Pictures not defined. The list length: ${list.length}`);
   }
-  const templateImageCard = document.querySelector('#image');
 
   const fragment = document.createDocumentFragment();
 
@@ -130,7 +131,6 @@ const renderPictures = function(list) {
  * @param {object} picture
  */
 const renderPopupPicture = function(picture) {
-  const templateImagePopup = document.querySelector('#popup-image');
   const clone = templateImagePopup.content.cloneNode(true);
   const img = clone.querySelector('img');
   const link = clone.querySelector('a');
@@ -153,11 +153,7 @@ const renderPopupPicture = function(picture) {
  */
 const togglePopup = function() {
   popup.classList.toggle('open');
-  if (popup.classList.contains('open')) {
-    body.style.overflow = 'hidden';
-  } else {
-    body.style.overflow = 'auto';
-  }
+  body.classList.toggle('no-scroll');
 };
 
 /**
@@ -190,8 +186,10 @@ const actionHandler = function(evt) {
 const imageHandler = function(evt) {
   evt.preventDefault();
 
-  if (evt.target.closest('a')) {
-    getPictureInfo(evt.target.parentNode.dataset.id);
+  const link = evt.target.closest('a');
+
+  if (link) {
+    getPictureInfo(link.dataset.id);
   }
 };
 
