@@ -2,7 +2,7 @@
 
 const templateImageCard = document.querySelector('#image');
 const templateImagePopup = document.querySelector('#popup-image');
-const action = document.querySelector('.main .action');
+const action = document.querySelector('.action.fetch');
 const container = document.querySelector('.images');
 const body = document.querySelector('body');
 const popup = document.querySelector('.popup');
