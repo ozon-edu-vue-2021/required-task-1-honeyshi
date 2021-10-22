@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -21,19 +21,17 @@
             <div></div>
             <div></div>
         </div>
-        <button class="action fetch" data-page="2">Загрузить картинки</button>
+        <button class="action fetch" data-page="1">Загрузить картинки</button>
         <section class="images content"></section>
     </main>
     <div class="popup">
-        <button class="action close">&Cross;</button>
+        <button class="action close">&#x02A2F;</button>
         <div class="content"></div>
     </div>
 
-    <script src="./scripts/index.js"></script>
-
     <template id="image">
         <a class="link" href="" data-id="">
-            <img src="" widht="250" alt=""></img>
+            <img src="" width="250" alt="">
         </a>
     </template>
 
@@ -42,12 +40,14 @@
             <figure>
                 <img src="" alt="">
                 <figcaption>
-                    Автор: <address class="author"></address>
+                    Автор: <i class="author"></i>
                 </figcaption>
             </figure>
             <a class="link open" href="" target="_blank">Открыть в полном размере</a>
         </div>
     </template>
+
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
